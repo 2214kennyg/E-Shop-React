@@ -3,9 +3,10 @@
     border: 2px solid black;
     padding: 40px;
     margin: 20px;
-    width: 600px;
+    width: 650px;
     justify-content: space-between;
     align-items: center;
+    background-color: ghostwhite;
     &_img {
         max-width: 300px;
         max-height: 500px;
@@ -15,16 +16,28 @@
         flex-direction: column;
         justify-content: center;
         border: 2px solid black;
+        border-radius: 10px;
         padding: 10px;
-        height: 300px;
+        height: 350px;
+        background-color: honeydew;
     }
     &_addCart {
-        margin: 10px;
+        margin: 20px;
         border: black 1px solid;
         padding: 0px;
         height: 30px;
     }
-    &_favBtnTrue {
-        background-color: red;
+    &_favBtn {
+        padding: 0px;
+        width: 60px;
+        align-self: center;
+        border: black 1px solid;
+        &_Active {
+            background-color: red;
+            padding: 0px;
+            width: 60px;
+            align-self: center;
+            border: black 1px solid;
+        }
     }
 }

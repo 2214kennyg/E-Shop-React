@@ -7,7 +7,7 @@ const HomePage = ({ books }) => {
         <div>
             <MyCarousel />
             <h1 className={styles.header}>
-                Scott Westerfeld's Books
+                Books by Scott Westerfeld
                 <img
                     className={styles.header_img}
                     src="https://m.media-amazon.com/images/I/51apjhhqkAL.jpg"
@@ -26,6 +26,7 @@ const HomePage = ({ books }) => {
                                 cover={book.cover}
                                 price={book.price}
                                 key={book.id}
+                                quantity={book.quantity}
                             />
                         );
                     })}

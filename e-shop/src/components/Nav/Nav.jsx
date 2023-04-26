@@ -3,10 +3,8 @@ import styles from "./Nav.module.scss";
 
 const Nav = () => {
     return (
-        <nav>
-            <NavLink to="/" className={styles.Nav_Link}>
-                Home
-            </NavLink>
+        <nav className={styles.Nav_Link}>
+            <NavLink to="/">Home</NavLink>
             {/* <NavLink to="/Products" className={activeStyle}>
                 Products
             </NavLink> */}
