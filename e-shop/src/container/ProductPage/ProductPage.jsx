@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getBookById } from "../../services/books";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import styles from "./ProductPage.module.scss";
 
 const ProductPage = () => {
@@ -33,11 +35,11 @@ const ProductPage = () => {
     const handleFavouriteClick = () => {
         setIsFavourited(!isFavourited);
     };
-    const activeStyle = (isFavourited) =>
-        isFavourited
-            ? `${styles.ProductPage_favBtn_Active} ${styles.ProductPage_favBtn}`
-            : `${styles.ProductPage_favBtn}`;
-    console.log(isFavourited);
+    // const activeStyle = (isFavourited) =>
+    //     isFavourited
+    //         ? `${styles.ProductPage_favBtn_Active} ${styles.ProductPage_favBtn}`
+    //         : `${styles.ProductPage_favBtn}`;
+    // console.log(isFavourited);
 
     return (
         book && (
@@ -67,7 +69,16 @@ const ProductPage = () => {
                     >
                         Add to cart
                     </button>
-                    <button
+                    <FontAwesomeIcon
+                        icon={faHeart}
+                        onClick={handleFavouriteClick}
+                        className={
+                            isFavourited
+                                ? styles.ProductPage_favBtn_Active
+                                : styles.ProductPage_favBtn
+                        }
+                    />
+                    {/* <button
                         onClick={handleFavouriteClick}
                         className={
                             isFavourited
@@ -76,7 +87,7 @@ const ProductPage = () => {
                         }
                     >
                         Fav
-                    </button>
+                    </button> */}
                 </div>
             </div>
         )

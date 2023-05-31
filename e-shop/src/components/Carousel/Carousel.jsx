@@ -4,7 +4,7 @@ import styles from "./Carousel.module.scss";
 
 const MyCarousel = () => {
     return (
-        <Carousel>
+        <Carousel variant="dark">
             <Carousel.Item>
                 <img
                     className={styles.img}
